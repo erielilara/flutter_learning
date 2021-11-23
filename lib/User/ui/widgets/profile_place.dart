@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:platzi_app/place.dart';
+import 'package:platzi_app/Place/model/place.dart';
 import 'profile_place_info.dart';
 import 'profile_place.dart';
 
@@ -14,7 +14,7 @@ class ProfilePlace extends StatelessWidget {
   Widget build(BuildContext context) {
 
     final photoCard = Container(
-      margin: EdgeInsets.only(
+      margin: const EdgeInsets.only(
           top: 10.0,
           bottom: 70.0
       ),
@@ -24,9 +24,9 @@ class ProfilePlace extends StatelessWidget {
               fit: BoxFit.cover,
               image: AssetImage(image)
           ),
-          borderRadius: BorderRadius.all(Radius.circular(20.0)),
+          borderRadius: const BorderRadius.all(Radius.circular(20.0)),
           color: Colors.red,
-          boxShadow: <BoxShadow>[
+          boxShadow: const <BoxShadow>[
             BoxShadow(
                 color: Colors.black38,
                 blurRadius: 10.0,
@@ -37,7 +37,7 @@ class ProfilePlace extends StatelessWidget {
     );
 
     return Stack(
-      alignment: Alignment(0.0, 0.8),
+      alignment: const Alignment(0.0, 0.8),
       children: <Widget>[
         photoCard,
         ProfilePlaceInfo(place)

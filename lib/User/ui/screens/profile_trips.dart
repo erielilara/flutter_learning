@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:platzi_app/profile_header.dart';
-import 'profile_places_list.dart';
-import 'profile_background.dart';
+import 'package:platzi_app/User/ui/screens/profile_header.dart';
+import '../widgets/profile_places_list.dart';
+import '../widgets/profile_background.dart';
 
 class ProfileTrips extends StatelessWidget {
   @override
