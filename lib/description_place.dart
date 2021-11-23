@@ -1,103 +1,120 @@
 import 'package:flutter/material.dart';
-import 'button_ppal.dart';
+import 'button_purple.dart';
+
 class DescriptionPlace extends StatelessWidget {
 
   String namePlace;
   int stars;
   String descriptionPlace;
 
-  DescriptionPlace( this.namePlace, this.stars, this.descriptionPlace);
+  DescriptionPlace(this.namePlace, this.stars, this.descriptionPlace);
 
-  String descriptionDummy = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.';
 
-@override
+
+  @override
   Widget build(BuildContext context) {
+    // TODO: implement build
 
-    final starHalf = Container(
-      margin: const EdgeInsets.only(
-          top: 320.0,
+    final star_half = Container (
+      margin: EdgeInsets.only(
+          top: 353.0,
           right: 3.0
       ),
-      child:  const Icon(
+
+      child: Icon(
         Icons.star_half,
-        color: Colors.amber,
+        color:  Color(0xFFf2C611),
       ),
     );
 
-    final starBorder = Container(
-      margin: const EdgeInsets.only(
-          top: 320.0,
+    final star_border = Container (
+      margin: EdgeInsets.only(
+          top: 353.0,
           right: 3.0
       ),
-      child:  const Icon(
+
+      child: Icon(
         Icons.star_border,
-        color: Colors.amber,
+        color:  Color(0xFFf2C611),
       ),
     );
 
-    final star = Container(
-      margin: const EdgeInsets.only(
-        top: 320.0,
+    final star = Container (
+      margin: EdgeInsets.only(
+        top: 353.0,
         right: 3.0
       ),
-      child:  const Icon(
+
+      child: Icon(
         Icons.star,
-        color: Colors.amber,
+        color:  Color(0xFFf2C611),
       ),
     );
 
-    final titleStars = Row (
-    children: <Widget>[
-      Container(
-        margin: const EdgeInsets.only(
-          top: 320.0,
-          left: 20.0,
-          right: 20.0
-        ),
-        child: Text(
-          namePlace,
-          style: const TextStyle(
-            fontSize: 30.0,
-            fontWeight: FontWeight.w900
+    final title_stars = Row (
+      children: <Widget>[
+        Container (
+          margin: EdgeInsets.only(
+            top: 350.0,
+            left: 20.0,
+            right: 20.0
           ),
-          textAlign: TextAlign.left,
+
+          child: Text(
+            namePlace,
+            style: TextStyle(
+              fontFamily: "Lato",
+              fontSize: 30.0,
+              fontWeight: FontWeight.w900
+            ),
+            textAlign: TextAlign.left,
+          ),
+
+        ),
+
+        Row(
+          children: <Widget>[
+            star,
+            star,
+            star,
+            star,
+            star_half
+          ],
         )
-      ),
-      Row(
-        children: <Widget> [
-          star,
-          star,
-          star,
-          star,
-          starHalf
-        ],
-      )
-    ]
+
+
+      ],
     );
 
     final description = Container(
-      margin: const EdgeInsets.only(
-        top: 20.0,
-        left: 20.0,
-        right: 20.0
+      margin: new EdgeInsets.only(
+          top: 20.0,
+          left: 20.0,
+          right: 20.0
+
       ),
-      child:  Text(
-        descriptionDummy,
+      child: new Text(
+        descriptionPlace,
         style: const TextStyle(
-          fontSize: 16.0,
-          fontWeight: FontWeight.bold,
-          color: Colors.black
+            fontFamily: "Lato",
+            fontSize: 16.0,
+            fontWeight: FontWeight.bold,
+            color: Color(0xFF56575a)
         ),
+
       ),
     );
 
-  return Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: <Widget> [
-      titleStars,
-      description, 
-      ButtonPpal('Navigate')
-    ],
-  );
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        title_stars,
+        description,
+        ButtonPurple("Navigate")
+      ],
+    );
+
+
   }
+
 }
